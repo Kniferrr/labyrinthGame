@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const gamefildReduser = createSlice({
   name: 'gamefildReduser',
   initialState: {
+    fieldSize: {x: 3, y: 3},
     error: null,
     start: {first: 0, second: 0},
     end: {first: 0, second: 0},

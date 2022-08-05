@@ -1,13 +1,14 @@
 import {ERROR,  setMatix} from "../redusers/gamefildReduser";
-
+import {useSelector} from "react-redux";
 
 export const startGame = () => {
     return  (dispatch) => {
+        
         const matrix = createMatrix();
         try{
             dispatch(setMatix(matrix));
         }catch(e){
-            dispatch(ERROR("Произошла ошибка при загрузке пользователей"));
+            dispatch(ERROR("Произошла ошибка при старте игры"));
         }
     }
 };
