@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-import gamefildReduser from './redusers/gamefildReduser'
+import gamefieldReduser from './redusers/gamefieldReduser'
 
 
 export default configureStore({
   reducer: {
-    gamefild: gamefildReduser,
+    gamefield: gamefieldReduser,
 },
 })

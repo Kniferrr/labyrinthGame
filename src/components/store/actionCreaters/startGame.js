@@ -1,4 +1,4 @@
-import {ERROR,  setMatix} from "../redusers/gamefildReduser";
+import {ERROR,  setMatix} from "../redusers/gamefieldReduser";
 import {useSelector} from "react-redux";
 
 export const startGame = () => {

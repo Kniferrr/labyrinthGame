@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export const gamefildReduser = createSlice({
-  name: 'gamefildReduser',
+export const gamefieldReduser = createSlice({
+  name: 'gamefieldReduser',
   initialState: {
     fieldSize: {x: 3, y: 3},
     error: null,
@@ -20,6 +20,6 @@ export const gamefildReduser = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { ERROR, setMatix } = gamefildReduser.actions
+export const { ERROR, setMatix } = gamefieldReduser.actions
 
-export default gamefildReduser.reducer
+export default gamefieldReduser.reducer

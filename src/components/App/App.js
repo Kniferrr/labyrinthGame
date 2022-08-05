@@ -1,10 +1,10 @@
 import './App.css';
-import GameFild from '../GameFild/GameFild';
+import GameField from '../GameField/GameField';
 
 function App() {
   return (
     <div className="App">
-      <GameFild/>
+      <GameField/>
     </div>
   );
 }

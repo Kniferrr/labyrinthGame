@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import {useSelector} from "react-redux";
 import {startGame} from "../store/actionCreaters/startGame";
 import { useDispatch } from 'react-redux';
-import "./GameFild.css"
+import "./GameField.css"
 
-function GameFild() {
-    const {matrix} = useSelector((state) => state.gamefild);
+function GameField() {
+    const {matrix} = useSelector((state) => state.gamefield);
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(startGame());
@@ -23,4 +23,4 @@ function GameFild() {
   )
 }
 
-export default GameFild;
+export default GameField;

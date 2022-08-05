@@ -1,0 +1,2 @@
+.App{height:100vh;width:100%}.App,.GameField{align-items:center;display:flex;justify-content:center}.GameField{flex-direction:column;height:70%;width:70%}.matrixCell{border:1px solid #535353;border-radius:10px;flex-grow:1;margin:3px}.matrixRow{display:flex;flex-grow:1;width:80%}
+/*# sourceMappingURL=main.e915f81a.css.map*/
