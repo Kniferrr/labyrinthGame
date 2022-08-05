@@ -8,6 +8,7 @@ export const gamefieldReduser = createSlice({
     start: {first: 0, second: 0},
     end: {first: 0, second: 0},
     matrix: [],
+    gameEnd: false,
   },
   reducers: {
     ERROR: (state, action) => {
@@ -15,11 +16,16 @@ export const gamefieldReduser = createSlice({
     },
     setMatix: (state, action) => {
     state.matrix = action.payload;
+    state.gameEnd=false;
     },
+    endgame: (state, action) => {
+      
+      state.gameEnd = true;
+      },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { ERROR, setMatix } = gamefieldReduser.actions
+export const { ERROR, setMatix,endgame} = gamefieldReduser.actions
 
 export default gamefieldReduser.reducer

@@ -1,7 +1,7 @@
 .GameField{
     display: flex;
-    height: 70%;
-    width: 70%;
+    height: 60%;
+    width: 60%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
