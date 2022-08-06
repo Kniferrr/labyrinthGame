@@ -6,7 +6,7 @@ import "./GameField.css";
 import {endGame} from "../store/actionCreaters/endGame"
 
 function GameField() {
-    const {matrix,fieldSize,gameEnd} = useSelector((state) => state.gamefield);
+    const {matrix,fieldSize,gameEnd,startPoint} = useSelector((state) => state.gamefield);
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(startGame(fieldSize));
@@ -14,11 +14,12 @@ function GameField() {
     
     const Examination = (e) => {
       dispatch(endGame(e.target.id))
-    }
+    };
     
     const Board = matrix.map((el)=> 
     <div key={el} className="matrixRow"> 
     {el.map((el)=> <span key={`${el.first},${el.second}`} id={[el.first,el.second]} className="matrixCell" onClick={Examination}>
+      {startPoint.first === el.first && startPoint.second === el.second ? <span>start</span>: null}
     </span>)} </div>)
     
     if(gameEnd !== false){
