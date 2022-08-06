@@ -1,0 +1,8 @@
+.TargetArrows{
+    display: flex;
+    flex-direction: row;
+}
+
+.TargetArrows span {
+    margin: 10px;
+}

@@ -74,11 +74,10 @@ function getRandomInt(max) {
             path.push(rnd2)
             positionStart.second = positionStart.second + num2;
         }
-    };
 
-    if(path.length === 0){
-        console.log("Restart")
-        generateEndPosition(fieldSize,positionStarts);
+        if(path.length <= 1){
+            i = 0;
+        };  
     };
     return {positionStart, path };
     

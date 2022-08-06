@@ -19,7 +19,7 @@ function GameField() {
     const Board = matrix.map((el)=> 
     <div key={el} className="matrixRow"> 
     {el.map((el)=> <span key={`${el.first},${el.second}`} id={[el.first,el.second]} className="matrixCell" onClick={Examination}>
-      {startPoint.first === el.first && startPoint.second === el.second ? <span>start</span>: null}
+      {startPoint.first === el.first && startPoint.second === el.second ? <span className='startPoint'>start</span>: <span></span>}
     </span>)} </div>)
     
     if(gameEnd !== false){
