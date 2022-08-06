@@ -1,0 +1,21 @@
+.GameField{
+    display: flex;
+    height: 60%;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.matrixCell{
+    flex-grow: 1;
+    border: 1px solid rgb(83, 83, 83);
+    border-radius: 10px;
+    margin: 3px;
+}
+
+.matrixRow{
+    display: flex;
+    flex-grow: 1;
+    width: 80%;
+}
