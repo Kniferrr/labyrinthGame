@@ -6,7 +6,7 @@ import "./GameField.css";
 import {endGame} from "../store/actionCreaters/endGame"
 
 function GameField() {
-    const {matrix,fieldSize} = useSelector((state) => state.gamefield);
+    const {matrix,fieldSize,gameEnd} = useSelector((state) => state.gamefield);
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(startGame(fieldSize));
@@ -21,6 +21,9 @@ function GameField() {
     {el.map((el)=> <span key={`${el.first},${el.second}`} id={[el.first,el.second]} className="matrixCell" onClick={Examination}>
     </span>)} </div>)
     
+    if(gameEnd !== false){
+      return <h1>{gameEnd}</h1>
+    };
     
 
   return (
