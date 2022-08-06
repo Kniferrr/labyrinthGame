@@ -1,9 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export const gamefieldReduser = createSlice({
-  name: 'gamefieldReduser',
-  initialState: {
-    fieldSize: {x: 3, y: 3},
+const initialState = {
+  fieldSize: {x: 3, y: 3},
     error: null,
     start: {first: 0, second: 0},
     end: {first: 0, second: 0},
@@ -12,7 +10,13 @@ export const gamefieldReduser = createSlice({
     path: [],
     startPoint: null,
     endPoint: null,
-  },
+    score: 0,
+    complexity: 1,
+}
+
+export const gamefieldReduser = createSlice({
+  name: 'gamefieldReduser',
+  initialState,
   reducers: {
     ERROR: (state, action) => {
     state.error = action.payload;
@@ -32,17 +36,26 @@ export const gamefieldReduser = createSlice({
       },
     endgame: (state, action) => {
       if(state.endPoint.first === Number(action.payload.first) && state.endPoint.second === Number(action.payload.second)){
-        console.log("goood")
         state.gameEnd = "Win";
+        state.score++;
       }else{
-        console.log("false")
         state.gameEnd = "Loss";
+        state.score = 0;
       }
+      },
+      gameRestart: (state, action) => {
+        return {...initialState, score: state.score, complexity: state.complexity, fieldSize: state.fieldSize};
+      },
+      Upcomplexity: (state, action) => {
+        state.complexity = Number(action.payload);
+      },
+      chengefieldSize: (state, action) => {
+        state.fieldSize = {x: Number(action.payload), y: Number(action.payload)};
       },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { ERROR, setMatix,endgame,setPoint,setPath,setStartPoint,setEndPoint} = gamefieldReduser.actions
+export const { ERROR, setMatix,endgame,setPoint,setPath,setStartPoint,setEndPoint,gameRestart,Upcomplexity,chengefieldSize} = gamefieldReduser.actions
 
 export default gamefieldReduser.reducer

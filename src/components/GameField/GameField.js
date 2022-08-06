@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import {useSelector} from "react-redux";
-import {startGame} from "../store/actionCreaters/startGame";
+import {restartGame} from "../store/actionCreaters/restartGame";
 import { useDispatch } from 'react-redux';
 import "./GameField.css";
 import {endGame} from "../store/actionCreaters/endGame"
 
 function GameField() {
-    const {matrix,fieldSize,gameEnd,startPoint} = useSelector((state) => state.gamefield);
+    const {matrix,fieldSize,gameEnd,startPoint,complexity} = useSelector((state) => state.gamefield);
     const dispatch = useDispatch();
     useEffect(()=>{
-        dispatch(startGame(fieldSize));
+        dispatch(restartGame(fieldSize,complexity));
     }, [])
     
     const Examination = (e) => {

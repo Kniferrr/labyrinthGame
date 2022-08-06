@@ -1,12 +1,11 @@
 import {ERROR,  setMatix,setStartPoint,setEndPoint,setPath} from "../redusers/gamefieldReduser";
 
-export const startGame = (fieldSize) => {
+export const startGame = (fieldSize,complexity) => {
     return  (dispatch) => {
         const newposition = generateStartPosition(fieldSize);
-        const positionEndFuncResult = generateEndPosition(fieldSize,newposition);
+        const positionEndFuncResult = generateEndPosition(fieldSize,newposition,complexity);
         const {positionStart,path} = positionEndFuncResult;
         const matrix = createMatrix(fieldSize);
-        console.log(positionStart)
         try{
             dispatch(setMatix(matrix));
             dispatch(setPath(path));
@@ -45,11 +44,11 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   };
 
-  const generateEndPosition = (fieldSize,positionStarts) =>{
+  const generateEndPosition = (fieldSize,positionStarts,complexity) =>{
     let path = [];
     let positionStart = {first: positionStarts.first, second: positionStarts.second};
     // y: 0 - -1 влево, 1 - +1 вправо, x: 2 - -1 вверх, 3: +1 вниз
-    for(let i = 0; i < fieldSize.x; i++){
+    for(let i = 0; i < fieldSize.x * complexity; i++){
         const rnd = getRandomInt(fieldSize.x+1);
         let num = -100;
         if(rnd === 2){
@@ -63,7 +62,6 @@ function getRandomInt(max) {
         }
 
         const rnd2 = getRandomInt(fieldSize.y+1);
-        console.log(`rnd2 - ${rnd2}`)
         let num2 = -100;
         if(rnd2 === 0){
             num2 = -1;
