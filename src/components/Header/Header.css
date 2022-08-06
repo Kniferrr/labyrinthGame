@@ -1,0 +1,34 @@
+.Score{
+    font-size: 25px;
+    margin: 15px;
+}
+
+.HeaderForm{
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.complexityBox{
+    margin: 15px;
+}
+
+.fild_Size_box{
+    margin: 15px;
+}
+
+.fild_Size{
+    background: rgb(124, 117, 117);
+}
+
+.complexity{
+    background: rgb(124, 117, 117);
+}
+
+.HederFormOKButton{
+
+    margin-bottom: 8px;
+}
