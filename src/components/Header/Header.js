@@ -33,17 +33,21 @@ function Header() {
 				<option value="2">2</option>
 				<option value="3">3</option>
 				<option value="4">4</option>
-                <option value="5">5</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
 			</select>
             </span>
             <span className='fild_Size_box'>
             <label>fild Size:</label>
             <select className='fild_Size' name="fild Size" onChange={onChangeField}>
-				<option value="3">3</option>
-				<option value="4">4</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
                 <option value="7">7</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
 			</select>
             </span>
     <button onClick={OkButton} className="btn btn-dark HederFormOKButton">OK</button>

@@ -24,9 +24,10 @@ function TargetDesignator() {
         const restartButton = gameEnd === false ? null : <div><button className='btn btn-dark' onClick={()=>  dispatch(restartGame(fieldSize,complexity))}>Restart</button></div>
   return (
     <>
-
+    <div className='TargetArrowsBox'>
     <div className='TargetArrows'>{arrows}</div>
-    <div>{restartButton}</div>
+    </div>
+    <div className='restartButton'>{restartButton}</div>
 
     </>
   )

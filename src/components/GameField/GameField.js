@@ -8,6 +8,7 @@ import {endGame} from "../store/actionCreaters/endGame"
 function GameField() {
     const {matrix,fieldSize,gameEnd,startPoint,complexity} = useSelector((state) => state.gamefield);
     const dispatch = useDispatch();
+    
     useEffect(()=>{
         dispatch(restartGame(fieldSize,complexity));
     }, [])
