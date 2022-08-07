@@ -61,7 +61,7 @@ function getRandomInt(max) {
            positionStart.first = positionStart.first + num;
         }
 
-        const rnd2 = getRandomInt(fieldSize.y+1);
+        const rnd2 = rnd;
         let num2 = -100;
         if(rnd2 === 0){
             num2 = -1;
