@@ -11,7 +11,7 @@ function GameField() {
     
     useEffect(()=>{
         dispatch(restartGame(fieldSize,complexity));
-    }, [])
+    }, []);
     
     const Examination = (e) => {
       dispatch(endGame(e.target.id))
