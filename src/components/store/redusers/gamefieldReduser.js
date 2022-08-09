@@ -52,10 +52,13 @@ export const gamefieldReduser = createSlice({
       chengefieldSize: (state, action) => {
         state.fieldSize = {x: Number(action.payload), y: Number(action.payload)};
       },
+      delitematrix: (state, action) => {
+        state.matrix = [];
+      }, 
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { ERROR, setMatix,endgame,setPoint,setPath,setStartPoint,setEndPoint,gameRestart,Upcomplexity,chengefieldSize} = gamefieldReduser.actions
+export const { ERROR, setMatix,endgame,setPoint,setPath,setStartPoint,setEndPoint,gameRestart,Upcomplexity,chengefieldSize,delitematrix} = gamefieldReduser.actions
 
 export default gamefieldReduser.reducer
