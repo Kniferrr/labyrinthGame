@@ -3,17 +3,14 @@ import {useSelector} from "react-redux";
 import "./TargetDesignator.css"
 import { useDispatch } from 'react-redux';
 import {restartGame} from "../store/actionCreaters/restartGame";
-import { motion,AnimatePresence, animate } from "framer-motion";
+import { motion,AnimatePresence } from "framer-motion";
 import {getRandomInt} from "../store/actionCreaters/startGame";
-import {useMemo} from "react"
+import {useMemo} from "react";
+import {variants} from "../animations/index";
 
 
 function TargetDesignator() {
 
-    const variants = {
-      initial: {y: -1000, opacity: 0},
-      visible: i => ({y: 0, opacity: 1, transition: { delay: i * 0.2}})
-    }
 
     const dispatch = useDispatch();
     const {path, gameEnd, fieldSize,complexity} = useSelector((state) => state.gamefield);
