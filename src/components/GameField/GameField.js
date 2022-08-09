@@ -3,7 +3,7 @@ import {useSelector} from "react-redux";
 import {restartGame} from "../store/actionCreaters/restartGame";
 import { useDispatch } from 'react-redux';
 import "./GameField.css";
-import {endGame} from "../store/actionCreaters/endGame"
+import {endGame} from "../store/actionCreaters/endGame";
 
 function GameField() {
     const {matrix,fieldSize,gameEnd,startPoint,complexity} = useSelector((state) => state.gamefield);

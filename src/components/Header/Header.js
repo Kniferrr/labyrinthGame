@@ -22,6 +22,8 @@ function Header() {
         e.preventDefault();
         dispatch(restartGame(fieldSize,complexity));
       }
+      
+
   return (
     <>
     <div className='HeaderForm'>
