@@ -7,6 +7,7 @@ import { motion,AnimatePresence } from "framer-motion";
 import {getRandomInt} from "../store/actionCreaters/startGame";
 import {useMemo} from "react";
 import {variants} from "../animations/index";
+import {ArrowUp,ArrowLeft, ArrowRight, arrowDown} from "../../img/index";
 
 
 function TargetDesignator() {
@@ -23,10 +24,10 @@ function TargetDesignator() {
             custom={i}
             variants={variants}
             >
-            {el === 0 ? "влево" : 
-           el === 1 ? "вправо" :
-           el === 2 ? "вверх" :
-           el === 3 ? "вниз" : 
+            {el === 0 ? ArrowLeft : 
+           el === 1 ? ArrowRight :
+           el === 2 ? ArrowUp :
+           el === 3 ? arrowDown : 
            <span>el</span>}
            </motion.span>
         });
